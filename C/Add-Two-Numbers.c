@@ -9,7 +9,7 @@ int main()
 
     z = x + y;
 
-    printf("Sum of the numbers = %f\n", z);
+    printf("Sum of the numbers %.2f and %.2f = %.2f\n", x, y, z);
 
     return 0;
 }
