@@ -1,25 +1,25 @@
 #include <stdio.h>
+#include <math.h>
 
 void main()
 {
-    float num1, num2;
-    float addition, subtraction, multiplication, division;
+    int a, b, c, d;
+    double root1, root2;
 
-    printf("Please enter bigger Number: ");
-    scanf("%f", &num1);
+    printf("Enter the value of a, b and c\n");
+    scanf("%d%d%d", &a, &b, &c);
 
-    printf("Please enter smaller Number: ");
-    scanf("%f", &num2);
+    d = b * b - 4 * a * c;
 
-    addition = num1 + num2;
-    subtraction = num1 - num2;
-    multiplication = num1 * num2;
-    division = num1 / num2;
+    if (d < 0)
+    {
+        printf("First root = %.2lf + i%.2lf\n", -b / (double)(2 * a), sqrt(-d) / (2 * a));
+        printf("Second root = %.2lf - i%.2lf\n", -b / (double)(2 * a), sqrt(-d) / (2 * a));
+    }
+    else
+    {
+        root1 = (-b + sqrt(d)) / (2 * a);
+        root2 = (-b - sqrt(d)) / (2 * a);
 
-    printf("\n\nAddition of %.2f and %.2f = %.2f\n\n", num1, num2, addition);
-    printf("Subtraction of %.2f and %.2f = %.2f\n\n", num1, num2, subtraction);
-    printf("Division of %.2f and %.2f = %.2f\n\n", num1, num2, division);
-    printf("Multiplication of %.2f and %.2f = %.2f\n\n", num1, num2, multiplication);
-}
-
-// gcc test1.c -o test1 && ./test1
+        printf("First root = %.2lf\n", root1);
+        printf("Second root = %.2lf\n", root2);
