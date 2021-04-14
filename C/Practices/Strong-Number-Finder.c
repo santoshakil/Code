@@ -2,7 +2,7 @@
 
 int main()
 {
-    int i, num, lastDigit, temp;
+    int i, num, selectedDigit, temp;
     int sum = 0;
     long fact;
 
@@ -13,10 +13,10 @@ int main()
 
     while (temp > 0)
     {
-        lastDigit = temp % 10;
+        selectedDigit = temp % 10;
         fact = 1;
 
-        for (i = 1; i <= lastDigit; i++)
+        for (i = 1; i <= selectedDigit; i++)
         {
             fact = fact * i;
         }
@@ -26,8 +26,8 @@ int main()
     }
 
     (sum == num)
-        ? printf("\n%d is strong number\n", num)
-        : printf("%d is not strong number\n", num);
+        ? printf("\n%d is Strong number\n", num)
+        : printf("%d is not Strong number\n", num);
 
     return 0;
 }

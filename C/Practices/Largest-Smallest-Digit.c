@@ -2,30 +2,29 @@
 
 int main()
 {
-
-    int number, lastDigit, smallest = 9, largest = 0;
+    int number, selectedDigit, last = 9, first = 0;
 
     printf("Enter a number:");
     scanf("%d", &number);
 
     while (number > 0)
     {
-        lastDigit = number % 10;
+        selectedDigit = number % 10;
 
-        if (smallest > lastDigit)
+        if (last > selectedDigit)
         {
-            smallest = lastDigit;
+            last = selectedDigit;
         }
 
-        if (largest < lastDigit)
+        if (first < selectedDigit)
         {
-            largest = lastDigit;
+            first = selectedDigit;
         }
 
         number = number / 10;
     }
-    printf("\nLargest digit is: %d\n", largest);
-    printf("Smallest digit is: %d\n", smallest);
+    printf("\nLargest digit is: %d\n", first);
+    printf("Smallest digit is: %d\n", last);
 
     return 0;
 }

@@ -10,5 +10,5 @@ void main(List<String> arguments) {
 class Item {
   String name;
   int roll;
-  Item({this.name, this.roll});
+  Item({required this.name, required this.roll});
 }
