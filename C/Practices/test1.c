@@ -1,20 +1,31 @@
+#include <stdio.h>
+
+int perfect(int *);
+
 int main()
 {
-    int i, j, min_idx, temp;
-    int items[] = {64, 25, 12, 22, 11};
-    for (i = 0; i < 5 - 1; i++)
+    int n, sum1;
+    printf("Enter a number as integer : ");
+    scanf("%d", &n);
+
+    sum1 = perfect(&n);
+
+    if (sum1 == n)
+        printf("\nThe number %d is a perfect number\n", n);
+    else
+        printf("\nThe number %d is not a perfect number\n", n);
+    return 0;
+}
+
+int perfect(int *numbr)
+{
+    int a = 1, sum = 0;
+
+    while (a < *numbr)
     {
-        min_idx = i;
-        for (j = i + 1; j < 5; j++)
-        {
-            if (items[j] < items[min_idx])
-            {
-                min_idx = j;
-                break;
-            }
-            temp = items[i];
-            items[i] = items[min_idx];
-            break;
-        }
+        if (*numbr % a == 0)
+            sum = sum + a;
+        a++;
     }
+    return (sum);
 }
