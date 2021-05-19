@@ -22,7 +22,7 @@ int main()
         // For each nose size
         for (int i = 0; i <= n - 1; i++)
         {
-            // Check nose size difference
+            // Check lies with nose size difference
             if (a[i + 1] > a[i])
                 ans += (a[i + 1] - a[i] - 1) / 5 + 1;
         }
