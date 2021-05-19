@@ -5,6 +5,7 @@ int main()
 {
     char str[1000], str1[1000], str2[1000];
     int i, j, k, l, n, m, sum, sum1, a, T;
+    // Take Test count
     scanf("%d", &T);
     getchar();
     for (a = 1; a <= T; a++)
