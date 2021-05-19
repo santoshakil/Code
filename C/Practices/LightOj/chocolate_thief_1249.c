@@ -10,43 +10,46 @@ struct shanta
 int main()
 {
     int n, i, j, k, l, m, p;
+    // number of test cases
     scanf("%d", &n);
     for (i = 1; i <= n; i++)
     {
+        // number of students
         scanf("%d", &m);
-        struct shanta dim[200], temp;
-        long long a1[200], a2[200], a3[200], ck = 0;
+        struct shanta name[200], temp;
+        long long length[200], width[200], height[200], ck = 0;
+        // for each student
         for (j = 0; j < m; j++)
         {
-            scanf("%s %lld %lld %lld", dim[j].s, &a1[j], &a2[j], &a3[j]);
-            dim[j].a = a1[j] * a2[j] * a3[j];
+            scanf("%s %lld %lld %lld", name[j].s, &length[j], &width[j], &height[j]);
+            name[j].a = length[j] * width[j] * height[j];
         }
         for (k = 0; k < m; k++)
         {
             for (l = 1 + k; l < m; l++)
             {
-                if (dim[k].a < dim[l].a)
+                if (name[k].a < name[l].a)
                 {
-                    strcpy(temp.s, dim[l].s);
-                    temp.a = dim[l].a;
+                    strcpy(temp.s, name[l].s);
+                    temp.a = name[l].a;
 
-                    strcpy(dim[l].s, dim[k].s);
-                    dim[l].a = dim[k].a;
+                    strcpy(name[l].s, name[k].s);
+                    name[l].a = name[k].a;
 
-                    strcpy(dim[k].s, temp.s);
-                    dim[k].a = temp.a;
+                    strcpy(name[k].s, temp.s);
+                    name[k].a = temp.a;
                 }
             }
         }
         for (p = 0; p < m - 1; p++)
         {
-            if (dim[p].a == dim[p + 1].a)
+            if (name[p].a == name[p + 1].a)
                 ++ck;
         }
         if (m - 1 == ck)
             printf("Case %d: no thief\n", i);
         else
-            printf("Case %d: %s took chocolate from %s\n", i, dim[0].s, dim[p].s);
+            printf("Case %d: %s took chocolate from %s\n", i, name[0].s, name[p].s);
     }
     return 0;
 }

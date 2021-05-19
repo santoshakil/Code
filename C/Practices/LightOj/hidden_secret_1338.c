@@ -14,6 +14,7 @@ int main()
         i = strlen(str);
         l = strlen(str1);
         k = 0;
+        // Removing Space
         for (j = 0; j < i; j++, k++)
         {
             if (str[j] == ' ')
@@ -24,6 +25,7 @@ int main()
         str[k] = '\0';
 
         i = strlen(str);
+        // Upper Case to Lower Case
         for (j = 0; j < i; j++)
         {
             if (str[j] >= 'a' && str[j] <= 'z')
@@ -31,6 +33,7 @@ int main()
         }
 
         m = 0;
+        // Removing Space
         for (j = 0; j < l; j++, m++)
         {
             if (str1[j] == ' ')
@@ -40,6 +43,7 @@ int main()
         }
         str1[m] = '\0';
         l = strlen(str1);
+        // Upper Case to Lower Case
         for (j = 0; j < l; j++)
         {
             if (str1[j] >= 'a' && str1[j] <= 'z')
@@ -47,14 +51,17 @@ int main()
         }
 
         sum = 0;
+        // Sum of str
         for (j = 0; j < i; j++)
         {
             sum = sum + str[j];
         }
         sum1 = 0;
+        // Sum of str1
         for (j = 0; j < l; j++)
             sum1 = sum1 + str1[j];
 
+        // Match two lines
         if (sum == sum1)
             printf("Case %d: Yes\n", a);
         else
