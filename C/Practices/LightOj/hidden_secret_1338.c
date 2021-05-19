@@ -9,8 +9,10 @@ int main()
     getchar();
     for (a = 1; a <= T; a++)
     {
+        // Get two lines of sentece
         gets(str);
         gets(str1);
+        // Get Length of two Lines
         i = strlen(str);
         l = strlen(str1);
         k = 0;
@@ -23,7 +25,7 @@ int main()
                 str[k] = str[j];
         }
         str[k] = '\0';
-
+        // Get new length of 1st line
         i = strlen(str);
         // Upper Case to Lower Case
         for (j = 0; j < i; j++)
@@ -42,6 +44,7 @@ int main()
                 str1[m] = str1[j];
         }
         str1[m] = '\0';
+        // Get new length of 2nd line
         l = strlen(str1);
         // Upper Case to Lower Case
         for (j = 0; j < l; j++)
