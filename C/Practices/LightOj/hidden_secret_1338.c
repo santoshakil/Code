@@ -8,6 +8,7 @@ int main()
     // Take Test count
     scanf("%d", &T);
     getchar();
+    // For each test
     for (a = 1; a <= T; a++)
     {
         // Get two lines of sentece
