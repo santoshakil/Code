@@ -28,12 +28,16 @@ int main()
             // calculate volume
             name[j].a = length[j] * width[j] * height[j];
         }
+        // For each student
         for (k = 0; k < numberOfStudents; k++)
         {
+            // For each next student
             for (l = 1 + k; l < numberOfStudents; l++)
             {
+                // Check volume of Chocolate
                 if (name[k].a < name[l].a)
                 {
+                    // Copy each name to temp with strcpy
                     strcpy(temp.s, name[l].s);
                     temp.a = name[l].a;
 
@@ -45,15 +49,21 @@ int main()
                 }
             }
         }
+        // Count sudents with mismatched volume of chocolate
         for (p = 0; p < numberOfStudents - 1; p++)
         {
             if (name[p].a == name[p + 1].a)
                 ++ck;
         }
+        // Check if there are any chocolate thief
         if (numberOfStudents - 1 == ck)
+        {
             printf("Case %d: no thief\n", i);
+        }
         else
+        {
             printf("Case %d: %s took chocolate from %s\n", i, name[0].s, name[p].s);
+        }
     }
     return 0;
 }
