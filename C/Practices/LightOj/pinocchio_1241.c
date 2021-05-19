@@ -12,10 +12,10 @@ int main()
     for (int i1 = 1; i1 <= t; i1++)
     {
         int n;
-        // Take nose size
+        // Take previous nose size
         scanf("%d", &n);
         for (int i = 1; i <= n; i++)
-            // Take next nose size
+            // Take after nose size
             scanf("%d", &a[i]);
         int ans = 0;
         a[0] = 2;
