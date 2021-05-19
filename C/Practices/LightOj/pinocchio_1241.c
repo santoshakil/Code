@@ -9,7 +9,7 @@ int main()
     // Take test count
     scanf("%d", &t);
     // For each test case
-    for (int ii = 1; ii <= t; ii++)
+    for (int i1 = 1; i1 <= t; i1++)
     {
         int n;
         // Take nose size
@@ -26,7 +26,7 @@ int main()
             if (a[i + 1] > a[i])
                 ans += (a[i + 1] - a[i] - 1) / 5 + 1;
         }
-        printf("Case %d: %d\n", ii, ans);
+        printf("Case %d: %d\n", i1, ans);
     }
     return 0;
 }
