@@ -2,7 +2,7 @@
 #include <string.h>
 
 // Student object
-struct shanta
+struct student
 {
     // Name
     char s[105];
@@ -19,7 +19,7 @@ int main()
     {
         // number of students
         scanf("%d", &numberOfStudents);
-        struct shanta name[200], temp;
+        struct student name[200], temp;
         long long length[200], width[200], height[200], ck = 0;
         // for each student scan students name, chocolate length, width, height
         for (j = 0; j < numberOfStudents; j++)
